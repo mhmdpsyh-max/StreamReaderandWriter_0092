@@ -31,4 +31,28 @@ class TokoElektronik {
 };
 
 void tampilkanBarang() {
+    ifstream file("gudang.txt");
+
+    cout << "\n===== DATA BARANG DI GUDANG =====" << endl;
+
+    if (!file) {
+        cout << "File belum tersedia." << endl;
+        return;
+    }
+
+    string barang;
+    int no = 1;
+
+    while (getline(file, barang)) {
+        cout << no++ << ". " << barang << endl;
+    }
+
+    if (no == 1) {
+        cout << "Gudang masih kosong." << endl;
+    }
+
+    file.close();
+}
+
+void tambahBarang() {
     
