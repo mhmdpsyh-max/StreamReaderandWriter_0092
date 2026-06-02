@@ -9,4 +9,6 @@ int main()
     try
     {
         //deklarasi array data dengan panjang index 3
+        array <int, 3> data = { 1, 2, 3 };
+        //memanggil array element ke-5 yang berarti akan terjadi error
         
