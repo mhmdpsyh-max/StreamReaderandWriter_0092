@@ -17,4 +17,18 @@ class TokoElektronik {
     }
 
     string ambilProduk(size_t nomorRak) {
-        
+        try {
+            return barang.at(nomorRak);
+        }
+        catch (const out_of_range&) {
+            throw string(
+                "Gagal Mengambil Barang : Rak nomor " +
+                to_string(nomorRak) +
+                " kosong atau tidak tersedia!"
+                );
+        }
+    }
+};
+
+void tampilkanBarang() {
+    
